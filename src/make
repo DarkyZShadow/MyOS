@@ -1,0 +1,12 @@
+# http://wiki.osdev.org/Babystep1
+# http://wiki.osdev.org/Bootable_CD
+nasm boot.asm -f bin -o bootsect.bin
+genisoimage -o myos.iso -V MyOS -b bootsect.bin contents
+
+
+
+
+# Custom :
+# scp bootsect.bin myweblogs@172.16.1.72:~/asm/MyOS/
+#
+# scp myos.iso soulie_s@172.16.1.4:~/Desktop/MyOS/src/
